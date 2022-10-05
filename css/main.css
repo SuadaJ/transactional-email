@@ -1,0 +1,241 @@
+/** Fonts **/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+/** Genera; Styles **/
+body{
+    font-family: 'Roboto', sans-serif;
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/** All Sections Flex Container **/
+.container{
+    width: 96%;
+    margin: 2%;
+    max-width: 640px;
+}
+
+/** Logo Section **/
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+}
+.header-text{
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: large;
+}
+
+/** Horizontal Divider **/
+.hline{
+    height: 1px;
+    width: 100%;
+    margin: 20px 0;
+    background-color: black;
+    width: 100%;
+}
+
+/** Header Menu Link Section **/
+.header-links{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.header-link{
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/** Confirmation Message Section **/
+.confirmation-message{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 96%;
+    margin: 20px 10px;
+}
+.confirmation-message-image{
+    /*margin-right: 30px;*/
+    width: 45%;
+}
+.confirmation-message-text{
+    font-weight: 400;
+    font-size: medium;
+    width: 45%;
+}
+
+/** Address Section **/
+.address-section{
+    width: 100%;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: stretch;
+    justify-content: center;
+    align-content: start;
+}
+
+/** Delivery Address Section **/
+.delivery-address{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+/** Grey Banner Heading - General Styles **/
+.billing-address, .delivery-address, .delivery-method, .basket-items, .order-summary{
+    min-width: 48%;
+    padding: 10px;
+    background-color: lightgray;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/** Delivery Method Section **/
+.delivery-method-text{
+    text-transform: none;
+    font-size: medium;
+}
+
+/** Paragraph - General Styles **/
+.billing-address-text, .delivery-address-text, .delivery-method-text{
+    text-align: left;
+    text-transform: uppercase;
+    background-color: lavender;
+    font-weight: 400;
+    font-size: medium;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/** Basket Section **/
+.item{
+    padding: 10px;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+.item-image{
+    max-width: 30%;
+    margin-right: 120px;
+}
+.item-description{
+    font-size: smaller;
+    margin-top: 10px;
+}
+
+/** Order Summary Section **/
+.order-summary-text{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.order-total{
+    min-width: 48%;
+    padding: 10px;
+    background-color: pink;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/** Footer Section **/
+.footer-image{
+    width: 100%;
+    margin-bottom: 20px;
+    min-height: 200px;
+    background-image: url("/assets/NH_confirmation_second.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.footer-banner{
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: lightgray;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer-banner-heading{
+    text-transform: uppercase;
+    font-weight: bolder;
+    padding: 10px;
+}
+.footer-banner-para{
+    padding: 10px;
+    font-weight: lighter;
+}
+.social-media{
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon{
+    margin: 0 10px;
+}
+
+/** Media Queries **/
+
+/** Large Mobiles **/
+@media only screen and (max-width: 430px){
+    /*Make all paragraph text smaller*/
+    .billing-address, .delivery-address, .delivery-method, .basket-items, .order-summary, .header-text, .header-link, .order-total{
+        font-size: smaller;
+    }
+    .billing-address-text, .delivery-address-text, .delivery-method-text{
+        font-size: small;
+    }
+    .footer-image{
+        min-height: 150px;
+        margin: 0;
+    }
+    .icon{
+        margin: 0 2px;
+    }
+    .item-image{
+        margin-right: 40px;
+    }
+}
+
+/** Medium Mobiles **/
+@media only screen and (max-width: 410px){
+    .confirmation-message-text{
+        font-size: smaller;
+    }
+    .icon{
+        height: 30px;
+        width: 30px;
+        margin: 0 5px;
+    }
+    .icon.apple{
+        height: 35px;
+        width: 125px;
+    }
+}
+
+/** Medium to Smalle Mobiles **/
+@media only screen and (max-width: 410px){
+    .header-links, .social-media{
+        flex-wrap: wrap;
+    }
+    .header-link{
+        margin-right: 3px;
+    }
+    .icon{
+        margin-bottom: 3px;
+    }
+}
